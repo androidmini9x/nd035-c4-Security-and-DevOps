@@ -1,0 +1,229 @@
+Started by user Admin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/udacity-final
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/androidmini9x/nd035-c4-Security-and-DevOps.git
+ > git init /var/lib/jenkins/workspace/udacity-final # timeout=10
+Fetching upstream changes from https://github.com/androidmini9x/nd035-c4-Security-and-DevOps.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.50.1'
+ > git fetch --tags --force --progress -- https://github.com/androidmini9x/nd035-c4-Security-and-DevOps.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/androidmini9x/nd035-c4-Security-and-DevOps.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 619200c27a7cb08919f513f0897bdb0379b23d9a (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 619200c27a7cb08919f513f0897bdb0379b23d9a # timeout=10
+Commit message: "Add test"
+ > git rev-list --no-walk 03b28b76146cc3d9b2926608a0a6851bb541a23c # timeout=10
+[udacity-final] $ mvn -f starter_code/pom.xml test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:auth-course >-----------------------
+[INFO] Building auth-course 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ auth-course ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ auth-course ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 20 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ auth-course ---
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/udacity-final/starter_code/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ auth-course ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 6 source files with javac [debug parameters release 17] to target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.2.5:test (default-test) @ auth-course ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.demo.SareetaApplicationTests
+17:14:49.751 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.SareetaApplicationTests]: SareetaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:14:49.954 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.SareetaApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-01-05T17:14:50.829Z  INFO 10452 --- [           main] c.example.demo.SareetaApplicationTests   : Starting SareetaApplicationTests using Java 17.0.17 with PID 10452 (started by jenkins in /var/lib/jenkins/workspace/udacity-final/starter_code)
+2026-01-05T17:14:50.833Z  INFO 10452 --- [           main] c.example.demo.SareetaApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2026-01-05T17:14:51.844Z  INFO 10452 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-05T17:14:51.932Z  INFO 10452 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 4 JPA repository interfaces.
+2026-01-05T17:14:53.109Z  INFO 10452 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-05T17:14:53.228Z  INFO 10452 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-01-05T17:14:53.290Z  INFO 10452 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-05T17:14:53.815Z  INFO 10452 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-05T17:14:53.892Z  INFO 10452 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-05T17:14:54.184Z  INFO 10452 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bootapp user=SA
+2026-01-05T17:14:54.186Z  INFO 10452 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-05T17:14:54.231Z  WARN 10452 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-05T17:14:55.861Z  INFO 10452 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-05T17:14:56.048Z  INFO 10452 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-05T17:14:56.910Z  WARN 10452 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-05T17:14:56.947Z  INFO 10452 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-01-05T17:14:57.886Z  INFO 10452 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:bootapp'
+2026-01-05T17:14:58.043Z  INFO 10452 --- [           main] c.example.demo.SareetaApplicationTests   : Started SareetaApplicationTests in 7.849 seconds (process running for 9.413)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.462 s -- in com.example.demo.SareetaApplicationTests
+[INFO] Running com.example.demo.controllers.CartControllerTest
+2026-01-05T17:15:00.001Z ERROR 10452 --- [           main] c.e.demo.controllers.CartController      : EVENT=RemoveFromCart STATUS=UNAUTHORIZED userId=0 error=Unauthorized access attempt
+2026-01-05T17:15:00.021Z ERROR 10452 --- [           main] c.e.demo.controllers.CartController      : EVENT=AddToCart STATUS=UNAUTHORIZED userId=0 error=Unauthorized access attempt
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.035 s -- in com.example.demo.controllers.CartControllerTest
+[INFO] Running com.example.demo.controllers.ItemControllerTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.060 s -- in com.example.demo.controllers.ItemControllerTest
+[INFO] Running com.example.demo.controllers.OrderControllerTest
+2026-01-05T17:15:00.236Z ERROR 10452 --- [           main] c.e.demo.controllers.OrderController     : EVENT=FinishOrder STATUS=UNAUTHORIZED userId=0 error=Unauthorized access attempt
+2026-01-05T17:15:00.253Z ERROR 10452 --- [           main] c.e.demo.controllers.OrderController     : EVENT=FinishOrder STATUS=FAILURE error=User not found
+2026-01-05T17:15:00.266Z ERROR 10452 --- [           main] c.e.demo.controllers.OrderController     : EVENT=GetOrder STATUS=UNAUTHORIZED userId=0 error=Unauthorized access attempt
+2026-01-05T17:15:00.281Z  INFO 10452 --- [           main] c.e.demo.controllers.OrderController     : EVENT=FinishOrder STATUS=SUCCESS userId=1 orderId=null
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.166 s -- in com.example.demo.controllers.OrderControllerTest
+[INFO] Running com.example.demo.controllers.UserControllerTest
+2026-01-05T17:15:00.456Z  INFO 10452 --- [           main] c.e.demo.controllers.UserController      : EVENT=CreateUser STATUS=SUCCESS username=test
+2026-01-05T17:15:00.462Z ERROR 10452 --- [           main] c.e.demo.controllers.UserController      : EVENT=CreateUser STATUS=FAILURE reason=InvalidPassword
+2026-01-05T17:15:00.485Z ERROR 10452 --- [           main] c.e.demo.controllers.UserController      : EVENT=CreateUser STATUS=FAILURE reason=InvalidPassword
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.189 s -- in com.example.demo.controllers.UserControllerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18.884 s
+[INFO] Finished at: 2026-01-05T17:15:00Z
+[INFO] ------------------------------------------------------------------------
+[udacity-final] $ mvn -f starter_code/pom.xml clean compile package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:auth-course >-----------------------
+[INFO] Building auth-course 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.3.2:clean (default-clean) @ auth-course ---
+[INFO] Deleting /var/lib/jenkins/workspace/udacity-final/starter_code/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ auth-course ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ auth-course ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 20 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ auth-course ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ auth-course ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ auth-course ---
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/udacity-final/starter_code/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ auth-course ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 6 source files with javac [debug parameters release 17] to target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.2.5:test (default-test) @ auth-course ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.demo.SareetaApplicationTests
+17:15:09.668 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.SareetaApplicationTests]: SareetaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:15:09.787 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.SareetaApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-01-05T17:15:10.268Z  INFO 10562 --- [           main] c.example.demo.SareetaApplicationTests   : Starting SareetaApplicationTests using Java 17.0.17 with PID 10562 (started by jenkins in /var/lib/jenkins/workspace/udacity-final/starter_code)
+2026-01-05T17:15:10.272Z  INFO 10562 --- [           main] c.example.demo.SareetaApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2026-01-05T17:15:10.949Z  INFO 10562 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-05T17:15:11.010Z  INFO 10562 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2026-01-05T17:15:11.794Z  INFO 10562 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-05T17:15:11.857Z  INFO 10562 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-01-05T17:15:11.898Z  INFO 10562 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-05T17:15:12.295Z  INFO 10562 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-05T17:15:12.376Z  INFO 10562 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-05T17:15:12.639Z  INFO 10562 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bootapp user=SA
+2026-01-05T17:15:12.641Z  INFO 10562 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-05T17:15:12.670Z  WARN 10562 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-05T17:15:13.990Z  INFO 10562 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-05T17:15:14.066Z  INFO 10562 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-05T17:15:14.634Z  WARN 10562 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-05T17:15:14.671Z  INFO 10562 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-01-05T17:15:15.468Z  INFO 10562 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:bootapp'
+2026-01-05T17:15:15.616Z  INFO 10562 --- [           main] c.example.demo.SareetaApplicationTests   : Started SareetaApplicationTests in 5.679 seconds (process running for 6.809)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.926 s -- in com.example.demo.SareetaApplicationTests
+[INFO] Running com.example.demo.controllers.CartControllerTest
+2026-01-05T17:15:17.383Z ERROR 10562 --- [           main] c.e.demo.controllers.CartController      : EVENT=RemoveFromCart STATUS=UNAUTHORIZED userId=0 error=Unauthorized access attempt
+2026-01-05T17:15:17.402Z ERROR 10562 --- [           main] c.e.demo.controllers.CartController      : EVENT=AddToCart STATUS=UNAUTHORIZED userId=0 error=Unauthorized access attempt
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.964 s -- in com.example.demo.controllers.CartControllerTest
+[INFO] Running com.example.demo.controllers.ItemControllerTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 s -- in com.example.demo.controllers.ItemControllerTest
+[INFO] Running com.example.demo.controllers.OrderControllerTest
+2026-01-05T17:15:17.685Z ERROR 10562 --- [           main] c.e.demo.controllers.OrderController     : EVENT=FinishOrder STATUS=UNAUTHORIZED userId=0 error=Unauthorized access attempt
+2026-01-05T17:15:17.703Z ERROR 10562 --- [           main] c.e.demo.controllers.OrderController     : EVENT=FinishOrder STATUS=FAILURE error=User not found
+2026-01-05T17:15:17.726Z ERROR 10562 --- [           main] c.e.demo.controllers.OrderController     : EVENT=GetOrder STATUS=UNAUTHORIZED userId=0 error=Unauthorized access attempt
+2026-01-05T17:15:17.739Z  INFO 10562 --- [           main] c.e.demo.controllers.OrderController     : EVENT=FinishOrder STATUS=SUCCESS userId=1 orderId=null
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.213 s -- in com.example.demo.controllers.OrderControllerTest
+[INFO] Running com.example.demo.controllers.UserControllerTest
+2026-01-05T17:15:17.899Z  INFO 10562 --- [           main] c.e.demo.controllers.UserController      : EVENT=CreateUser STATUS=SUCCESS username=test
+2026-01-05T17:15:17.904Z ERROR 10562 --- [           main] c.e.demo.controllers.UserController      : EVENT=CreateUser STATUS=FAILURE reason=InvalidPassword
+2026-01-05T17:15:17.911Z ERROR 10562 --- [           main] c.e.demo.controllers.UserController      : EVENT=CreateUser STATUS=FAILURE reason=InvalidPassword
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.166 s -- in com.example.demo.controllers.UserControllerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-war-plugin:3.4.0:war (default-war) @ auth-course ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [auth-course] in [/var/lib/jenkins/workspace/udacity-final/starter_code/target/auth-course-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Building war: /var/lib/jenkins/workspace/udacity-final/starter_code/target/auth-course-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:3.3.5:repackage (repackage) @ auth-course ---
+[INFO] Replacing main artifact /var/lib/jenkins/workspace/udacity-final/starter_code/target/auth-course-0.0.1-SNAPSHOT.war with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /var/lib/jenkins/workspace/udacity-final/starter_code/target/auth-course-0.0.1-SNAPSHOT.war.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18.797 s
+[INFO] Finished at: 2026-01-05T17:15:21Z
+[INFO] ------------------------------------------------------------------------
+[DeployPublisher][INFO] Attempting to deploy 1 war file(s)
+[DeployPublisher][INFO] Deploying /var/lib/jenkins/workspace/udacity-final/starter_code/target/auth-course-0.0.1-SNAPSHOT.war to container Tomcat 9.x Remote with context myApp
+  Redeploying [/var/lib/jenkins/workspace/udacity-final/starter_code/target/auth-course-0.0.1-SNAPSHOT.war]
+  Undeploying [/var/lib/jenkins/workspace/udacity-final/starter_code/target/auth-course-0.0.1-SNAPSHOT.war]
+  Deploying [/var/lib/jenkins/workspace/udacity-final/starter_code/target/auth-course-0.0.1-SNAPSHOT.war]
+Finished: SUCCESS
